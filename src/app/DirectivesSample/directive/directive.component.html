@@ -1,0 +1,66 @@
+<div>
+<br>
+
+Sample Directives are ngFor, ngIf etc...
+<br>
+<ul>
+  <li *ngFor="let friend of Friends; let counter = index">   
+    {{friend}} . counter number {{ counter + 1}} - 
+  <button (click)="DisplayText(friend)">Click {{friend}}</button>
+  </li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+    <td>ID</td><td>Name</td><td>City</td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let loc of Locations">
+    <td>{{loc.id}}</td>
+    <td>{{loc.Name}}</td>
+    <td>{{loc.City}}</td>
+  </tr>
+</tbody>
+</table>
+
+<table class="tblLocations">
+    <thead>
+      <tr>
+          <td>S.No</td>
+      <td>ID</td><td>UserName</td><td>ZipCode</td><td>Latitude</td>
+      <td>Longitude</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let loc of Locations1; let sno = index">
+      <td>{{sno + 1}}</td>
+      <td>{{loc.id}}</td>
+      <td>{{loc.username}}</td>
+      <td>{{loc.address.zipcode}}</td>
+      <td>{{loc.address.geo.lat}}</td>
+      <td>{{loc.address.geo.lng}}</td>
+    </tr>
+  </tbody>
+  </table>
+
+  <button (click)="ToggleDiv()">Toggle Div</button>
+
+  <div class="divIf" *ngIf="varCheck; else elseTemplate">
+    For true
+  </div>
+  <ng-template #elseTemplate>
+    <div class="divElse">
+        For False
+  </div>
+  </ng-template>
+
+  <div [ngSwitch]="city">
+<span *ngSwitchCase="'chn'">Chennai</span>
+<span *ngSwitchCase="'cmb'">Coimbatore</span>
+<span *ngSwitchCase="'Tir'">Tiruchy</span>
+  </div>
+  
+
+</div>

@@ -1,0 +1,15 @@
+.tblLocations{
+    border: 2px;
+    border-style: solid;
+    color: red;
+}
+.divIf{
+    background-color: aqua;
+    width: 100px;
+    height: 100px;
+}
+.divElse{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}

@@ -1,0 +1,22 @@
+
+#divTitle{
+    width: 100%;
+    height: 200px;
+    border-width: 2px;
+    background-color: aqua; 
+}
+#divThumbNail{
+    width: 20%;
+    height: 200px;
+    border-width: 2px;
+    background-color:red;
+    float: left;
+    
+}
+#divDesc{
+    width: 80%;
+    height: 200px;
+    border-width: 2px;
+    background-color: blue;
+    float: right;
+}
