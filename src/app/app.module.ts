@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {RouterModule} from '@angular/router';
+import {FormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,10 @@ import { DirectiveComponent } from './DirectivesSample/directive/directive.compo
 import { PipesComponent } from './PipeSample/pipes/pipes.component';
 import { BadRouteComponent } from './bad-route/bad-route.component';
 import { FamilyComponent } from './Family/family/family.component';
+import { ServicesComponent } from './ServicesDemo/services/services.component';
+import { Child1Component } from './ServicesDemo/child1/child1.component';
+import { Child2Component } from './ServicesDemo/child2/child2.component';
+import { Child3Component } from './ServicesDemo/child3/child3.component';
 
 
 @NgModule({
@@ -26,11 +31,16 @@ import { FamilyComponent } from './Family/family/family.component';
     DirectiveComponent,
     PipesComponent,
     BadRouteComponent,
-    FamilyComponent
+    FamilyComponent,
+    ServicesComponent,
+    Child1Component,
+    Child2Component,
+    Child3Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     RouterModule.forRoot([
       
       {        
@@ -62,6 +72,20 @@ import { FamilyComponent } from './Family/family/family.component';
         path:'',
         redirectTo: 'Review',
         pathMatch: 'full'        
+      },
+      {
+        path: 'Services',
+component: ServicesComponent,
+children:[
+  {
+    path: 'Child1',
+    component: Child1Component
+  },
+  {
+   path: 'Child2',
+   component: Child2Component
+ }
+]
       },
       {
         path: '**',

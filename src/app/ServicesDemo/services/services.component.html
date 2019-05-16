@@ -1,0 +1,18 @@
+<div>
+ Iam Services Parent with two childs
+ <br>
+
+ <a routerLink="Child1">Child 1</a> <br>
+ <a routerLink="Child2">Child 2</a> <br>
+ <br>
+ <br>
+
+ <router-outlet></router-outlet>
+
+ <br>
+Name = {{Name}} <br><br>
+Changed Name = <input type="text" [(ngModel)]="Name"/>
+
+ <app-child3 [ReceivedName]="Name" (SendToParent)="ReceivedNewName($event)"> </app-child3>
+ 
+</div>
