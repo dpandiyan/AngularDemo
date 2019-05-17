@@ -1,0 +1,27 @@
+<div>
+Template Forms Demo:
+<br>
+<form #detailsForm="ngForm" (ngSubmit)="SubmitDetails(detailsForm)">
+
+  <label for="">Name:</label>&nbsp;
+  <input type="text" name="Name" [(ngModel)]="fullName" required />
+  <span [ngStyle]="{color:detailsForm.controls.Name.invalid?'red':'white'}">Minimum value 3 chars. Maximum 50 chars</span>
+<br>
+<label for="">Age:</label> &nbsp;
+  <input type="text" name="age" [(ngModel)]="age" required>
+  <span [ngStyle]="{color:detailsForm.controls.age.invalid?'red':'white'}">
+    Minimu 18 years and max 65 years</span>
+  <br>
+  <label for="">Hobby:</label>
+  <select name="hobby" id="hobbyies" [(ngModel)]="hobbies">
+    <option value="cri">Cricket</option>
+    <option value="hoc">Hockey</option>
+    <option value="dri">Driving</option>
+  </select>
+
+  <br>
+
+  <input type="Submit" value="Submit">
+
+</form>
+</div>

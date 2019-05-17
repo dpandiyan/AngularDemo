@@ -11,13 +11,14 @@ export class Child3Component implements OnInit {
   @Input() ReceivedName 
   @Output() SendToParent = new EventEmitter()
   
+  ChangedName = ""
   constructor() { } 
   ngOnInit() {
   }
 
   BroadCastChange = function()
   {
-    this.SendToParent.emit(this.ReceivedName)
+    this.SendToParent.emit(this.ChangedName)
   }
 
 }

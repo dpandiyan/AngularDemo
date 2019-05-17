@@ -18,6 +18,9 @@ import { ServicesComponent } from './ServicesDemo/services/services.component';
 import { Child1Component } from './ServicesDemo/child1/child1.component';
 import { Child2Component } from './ServicesDemo/child2/child2.component';
 import { Child3Component } from './ServicesDemo/child3/child3.component';
+import { NoTestComponent } from './NoSpecDemo/no-test/no-test.component';
+import { TemplateFormsComponent } from './FormsDemo/template-forms/template-forms.component';
+import { ReactiveFormsComponent } from './FormsDemo/reactive-forms/reactive-forms.component';
 
 
 @NgModule({
@@ -35,7 +38,10 @@ import { Child3Component } from './ServicesDemo/child3/child3.component';
     ServicesComponent,
     Child1Component,
     Child2Component,
-    Child3Component
+    Child3Component,
+    NoTestComponent,
+    TemplateFormsComponent,
+    ReactiveFormsComponent
   ],
   imports: [
     BrowserModule,
@@ -86,6 +92,14 @@ children:[
    component: Child2Component
  }
 ]
+      },
+      {
+        path: 'Templates',
+   component: TemplateFormsComponent
+      },
+      {
+        path: 'Reactive',
+   component: ReactiveFormsComponent
       },
       {
         path: '**',
