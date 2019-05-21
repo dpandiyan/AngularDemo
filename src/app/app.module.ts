@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {RouterModule} from '@angular/router';
 import {FormsModule} from '@angular/forms';
+import {ReactiveFormsModule } from '@angular/forms'
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +24,9 @@ import { Child3Component } from './ServicesDemo/child3/child3.component';
 import { NoTestComponent } from './NoSpecDemo/no-test/no-test.component';
 import { TemplateFormsComponent } from './FormsDemo/template-forms/template-forms.component';
 import { ReactiveFormsComponent } from './FormsDemo/reactive-forms/reactive-forms.component';
+import { AnimationDemoComponent } from './animation-demo/animation-demo.component';
+import { RestComponent } from './RestAPIDemo/rest/rest.component';
+
 
 
 @NgModule({
@@ -41,12 +47,17 @@ import { ReactiveFormsComponent } from './FormsDemo/reactive-forms/reactive-form
     Child3Component,
     NoTestComponent,
     TemplateFormsComponent,
-    ReactiveFormsComponent
+    ReactiveFormsComponent,
+    AnimationDemoComponent,
+    RestComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
     RouterModule.forRoot([
       
       {        
@@ -100,6 +111,14 @@ children:[
       {
         path: 'Reactive',
    component: ReactiveFormsComponent
+      },
+      {
+        path: 'Animation',
+   component: AnimationDemoComponent
+      },
+      {
+        path: 'RESTService',
+   component: RestComponent
       },
       {
         path: '**',
