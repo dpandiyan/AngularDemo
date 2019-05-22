@@ -26,7 +26,7 @@ import { TemplateFormsComponent } from './FormsDemo/template-forms/template-form
 import { ReactiveFormsComponent } from './FormsDemo/reactive-forms/reactive-forms.component';
 import { AnimationDemoComponent } from './animation-demo/animation-demo.component';
 import { RestComponent } from './RestAPIDemo/rest/rest.component';
-
+import { EmployeeDetailsComponent } from './RestAPIDemo/employee-details/employee-details.component';
 
 
 @NgModule({
@@ -49,7 +49,8 @@ import { RestComponent } from './RestAPIDemo/rest/rest.component';
     TemplateFormsComponent,
     ReactiveFormsComponent,
     AnimationDemoComponent,
-    RestComponent
+    RestComponent,
+    EmployeeDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -119,6 +120,10 @@ children:[
       {
         path: 'RESTService',
    component: RestComponent
+      },
+      {
+        path: "EmployeeDetails/:empID",
+        component: EmployeeDetailsComponent
       },
       {
         path: '**',

@@ -1,10 +1,27 @@
 
 <div>
-  REST Data:
+  REST Data: 
   <br>
-  <ol>
-    <li *ngFor="let usr of receivedData">
-      {{usr.name}} from {{usr.address.city}}
-    </li>
-  </ol>
+  <button (click)="addNewEmployee()">Create New Employee</button>
+<table border="1">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Salary</th>
+      <th>Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of receivedData">
+      <td>{{emp.id}}</td>
+      <td>{{emp.employee_name}}</td>
+      <td>{{emp.employee_salary}}</td>
+      <td>{{emp.employee_age}}</td>
+      <td><button (click)="getEmployeeDetails(emp.id)">Get Details</button></td>
+      <td><button (click)="DeleteEmployee(emp.id)">Delete</button></td>
+    </tr>
+  </tbody>
+</table>
+
 </div>
